@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * The type Node.
@@ -9,6 +10,8 @@ public class Node {
     private int object;
     private Node previous = null;
     private Node next = null;
+
+    private final ArrayList<Node> nextNodesBFS = new ArrayList<>();
 
     /**
      * Instantiates a new Node.
@@ -71,5 +74,14 @@ public class Node {
      */
     public void setNext(final Node next) {
         this.next = next;
+    }
+
+    public ArrayList<Node> getNextNodesBFS() {
+        return nextNodesBFS;
+    }
+
+    @Override
+    public String toString() {
+        return ""+object;
     }
 }

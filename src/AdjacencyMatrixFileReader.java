@@ -65,6 +65,47 @@ public class AdjacencyMatrixFileReader {
         this.stringArray = stringArray;
     }
 
+    public void findAllPathsBFS() {
+        Deque<Node> queue = new LinkedList<>();
+        ArrayList<Integer> visited = new ArrayList<>();
+        for (int i = 0; i < getStringArray().length; i++) {
+            if (!visited.contains(i)) {
+                Node currentNode = new Node(i);
+                ArrayList<Node> tree = new ArrayList<>();
+                visited.add(i);
+                queue.add(currentNode);
+                tree.add(currentNode);
+                while (!queue.isEmpty()) {
+                    currentNode = queue.element();
+                    for (int j = 0; j < getStringArray().length; j++) {
+                        if (stringArray[queue.element().getObject()].charAt(j) == '1' && !visited.contains(j)) {
+                            Node tempNode = new Node(j);
+                            currentNode.getNextNodesBFS().add(tempNode);
+                            tempNode.setPrevious(currentNode);
+                            visited.add(j);
+                            queue.add(tempNode);
+                            tree.add(tempNode);
+                        }
+                    }
+                    queue.remove();
+                }
+                printPaths(tree);
+            }
+        }
+    }
+
+    private void printPaths(ArrayList<Node> nodeArrayList) {
+        for (Node node:nodeArrayList) {
+            if (node.getNextNodesBFS()!= null){
+                for (Node neighbourNodes:node.getNextNodesBFS()) {
+                    System.out.printf("%s is connected to %s \n", node,neighbourNodes);
+                }
+            }else{
+                System.out.printf("%s is connected to nothing. \n",node);
+            }
+        }
+    }
+
     /**
      * Find the shortest path.
      *
@@ -106,7 +147,7 @@ public class AdjacencyMatrixFileReader {
         if (nodeList.isEmpty()) {
             System.out.println("No paths found");
         }
-        for (Node node: nodeList) {
+        for (Node node : nodeList) {
             Node currentNode = node;
             while (currentNode.getPrevious() != null) {
                 currentNode.getPrevious().setNext(currentNode);
@@ -115,6 +156,7 @@ public class AdjacencyMatrixFileReader {
             printShortestPath(currentNode);
         }
     }
+
     private void linkNodesTogether(final Node node) {
         Node currentNode = node;
         while (currentNode.getPrevious() != null) {
@@ -127,19 +169,20 @@ public class AdjacencyMatrixFileReader {
     private ArrayList<Node> retainSmallestPathsOnly(final ArrayList<Node> nodeArrayList) {
         int smallestLength = stringArray.length - 1;
         ArrayList<Node> toRemove = new ArrayList<>();
-        for (Node node: nodeArrayList) {
+        for (Node node : nodeArrayList) {
             int currentLength = 0;
             Node currentNode = node;
             while (currentNode.getPrevious() != null) {
                 currentLength += 1;
                 currentNode = currentNode.getPrevious();
-            } if (currentLength > smallestLength) {
+            }
+            if (currentLength > smallestLength) {
                 toRemove.add(node);
             } else {
                 smallestLength = currentLength;
             }
         }
-        for (Node node:toRemove) {
+        for (Node node : toRemove) {
             nodeArrayList.remove(node);
         }
         return nodeArrayList;
