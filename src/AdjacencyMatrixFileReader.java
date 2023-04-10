@@ -66,6 +66,11 @@ public class AdjacencyMatrixFileReader {
         this.stringArray = stringArray;
     }
 
+    /**
+     * Find all paths dfs.
+     *
+     * @param startingNode the starting node
+     */
     public void findAllPathsDFS(int startingNode) {
         Stack<Node> stack = new Stack<>();
         ArrayList<Integer> visited = new ArrayList<>();
@@ -75,8 +80,8 @@ public class AdjacencyMatrixFileReader {
             stack.add(currentNode);
             tree.add(currentNode);
             while (!stack.isEmpty()) {
-                currentNode = stack.peek();
                 for (int j = 0; j < getStringArray().length; j++) {
+                    currentNode = stack.peek();
                     if (stringArray[stack.peek().getObject()].charAt(j) == '1' && !visited.contains(j)) {
                         Node tempNode = new Node(j);
                         currentNode.getNextNodesBFS().add(tempNode);
@@ -84,6 +89,7 @@ public class AdjacencyMatrixFileReader {
                         visited.add(j);
                         stack.push(tempNode);
                         tree.add(tempNode);
+                        j = -1;
                     }
                 }
                 stack.pop();
@@ -94,11 +100,16 @@ public class AdjacencyMatrixFileReader {
 
     }
 
+    /**
+     * Find all paths bfs.
+     */
     public void findAllPathsBFS() {
         Deque<Node> queue = new LinkedList<>();
         ArrayList<Integer> visited = new ArrayList<>();
+        int count = 0;
         for (int i = 0; i < getStringArray().length; i++) {
             if (!visited.contains(i)) {
+                count++;
                 Node currentNode = new Node(i);
                 ArrayList<Node> tree = new ArrayList<>();
                 visited.add(i);
@@ -115,12 +126,10 @@ public class AdjacencyMatrixFileReader {
                             queue.add(tempNode);
                             tree.add(tempNode);
                         }
-                    }
-                    queue.remove();
+                    }queue.remove();
                 }
-                printPaths(tree);
-            }
-        }
+//                printPaths(tree);
+            }}System.out.printf("There is a total of %s components",count);
     }
 
     private void printPaths(ArrayList<Node> nodeArrayList) {

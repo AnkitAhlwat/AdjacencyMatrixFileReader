@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Add method to findAllPathsBFS()">
+    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Debug BFS not showing components not connected">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdjacencyMatrixFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdjacencyMatrixFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681147670652</updated>
-      <workItem from="1681147671818" duration="6237000" />
+      <workItem from="1681147671818" duration="8495000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1681147962451</created>
@@ -83,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681152072197</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Debug BFS not showing components not connected">
+      <created>1681154299320</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681154299320</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,19 +98,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add method to findAllPathsBFS()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add method to findAllPathsBFS()" />
+    <MESSAGE value="Debug BFS not showing components not connected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug BFS not showing components not connected" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="i == 13" language="JAVA" />
-          <url>file://$PROJECT_DIR$/src/AdjacencyMatrixFileReader.java</url>
-          <line>120</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="nodeArrayList" />
