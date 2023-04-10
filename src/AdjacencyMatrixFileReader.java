@@ -4,6 +4,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Stack;
 
 /**
  * The type Adjacency matrix file reader.
@@ -65,6 +66,34 @@ public class AdjacencyMatrixFileReader {
         this.stringArray = stringArray;
     }
 
+    public void findAllPathsDFS(int startingNode) {
+        Stack<Node> stack = new Stack<>();
+        ArrayList<Integer> visited = new ArrayList<>();
+            Node currentNode = new Node(startingNode);
+            ArrayList<Node> tree = new ArrayList<>();
+            visited.add(startingNode);
+            stack.add(currentNode);
+            tree.add(currentNode);
+            while (!stack.isEmpty()) {
+                currentNode = stack.peek();
+                for (int j = 0; j < getStringArray().length; j++) {
+                    if (stringArray[stack.peek().getObject()].charAt(j) == '1' && !visited.contains(j)) {
+                        Node tempNode = new Node(j);
+                        currentNode.getNextNodesBFS().add(tempNode);
+                        tempNode.setPrevious(currentNode);
+                        visited.add(j);
+                        stack.push(tempNode);
+                        tree.add(tempNode);
+                    }
+                }
+                stack.pop();
+            }
+            System.out.println(visited);
+            printPaths(tree);
+
+
+    }
+
     public void findAllPathsBFS() {
         Deque<Node> queue = new LinkedList<>();
         ArrayList<Integer> visited = new ArrayList<>();
@@ -95,13 +124,14 @@ public class AdjacencyMatrixFileReader {
     }
 
     private void printPaths(ArrayList<Node> nodeArrayList) {
-        for (Node node:nodeArrayList) {
-            if (node.getNextNodesBFS()!= null){
-                for (Node neighbourNodes:node.getNextNodesBFS()) {
-                    System.out.printf("%s is connected to %s \n", node,neighbourNodes);
+        if (nodeArrayList.size() == 1){
+            System.out.printf("%s is connected to nothing. \n", nodeArrayList.get(0));
+        }
+        for (Node node : nodeArrayList) {
+            if (node.getNextNodesBFS() != null) {
+                for (Node neighbourNodes : node.getNextNodesBFS()) {
+                    System.out.printf("%s is connected to %s \n", node, neighbourNodes);
                 }
-            }else{
-                System.out.printf("%s is connected to nothing. \n",node);
             }
         }
     }

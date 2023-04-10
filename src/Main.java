@@ -11,6 +11,6 @@ public class Main {
         AdjacencyMatrixFileReader fileReader = new AdjacencyMatrixFileReader();
         fileReader.readStrings("src/AdjacencyMatrixTextFile.txt");
         fileReader.findAllPathsBFS();
-
+//        fileReader.findAllPathsDFS(11);
     }
 }
