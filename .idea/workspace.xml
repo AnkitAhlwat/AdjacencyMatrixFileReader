@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Add docstrings">
-      <change afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DijkstraNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdjacencyMatrixFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdjacencyMatrixFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Polish file">
+      <change beforePath="$PROJECT_DIR$/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +68,7 @@
       <workItem from="1681147671818" duration="8509000" />
       <workItem from="1681333530907" duration="9000" />
       <workItem from="1681503965137" duration="524000" />
-      <workItem from="1681585707027" duration="1500000" />
+      <workItem from="1681585707027" duration="2754000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1681147962451</created>
@@ -102,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681156443186</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create new files to apply Dijkstra Algorithm">
+      <created>1681587259258</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681587259258</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Polish file">
+      <created>1681587282055</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681587282055</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +123,9 @@
     <MESSAGE value="Add method to findAllPathsBFS()" />
     <MESSAGE value="Debug BFS not showing components not connected" />
     <MESSAGE value="Add docstrings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add docstrings" />
+    <MESSAGE value="Create new files to apply Dijkstra Algorithm" />
+    <MESSAGE value="Polish file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Polish file" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
