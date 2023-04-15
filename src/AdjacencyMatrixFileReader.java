@@ -128,8 +128,10 @@ public class AdjacencyMatrixFileReader {
                         }
                     }queue.remove();
                 }
-//                printPaths(tree);
-            }}System.out.printf("There is a total of %s components",count);
+                printPaths(tree);
+            }
+        }
+//        System.out.printf("There is a total of %s components",count);
     }
 
     private void printPaths(ArrayList<Node> nodeArrayList) {

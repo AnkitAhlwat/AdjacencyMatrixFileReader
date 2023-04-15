@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         AdjacencyMatrixFileReader fileReader = new AdjacencyMatrixFileReader();
         fileReader.readStrings("src/AdjacencyMatrixTextFile.txt");
-        fileReader.findAllPathsBFS();
-//        fileReader.findAllPathsDFS(11);
+//        fileReader.findAllPathsBFS();
+        fileReader.findAllPathsDFS(11);
     }
 }
