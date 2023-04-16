@@ -1,7 +1,11 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.LinkedList;
+
 
 public class Dijkstra {
     public String[] stringArray;
@@ -43,7 +47,9 @@ public class Dijkstra {
                 }
                 if (stringArray[currentNodePosition].charAt(i) == '1' && unVisited.contains(dijkstraNodeHashMap.get(i))) {
                     DijkstraNode nextNode = dijkstraNodeHashMap.get(i);
-                    dijkstraNodeDeque.add(nextNode);
+                    if (!dijkstraNodeDeque.contains(nextNode)){
+                        dijkstraNodeDeque.add(nextNode);
+                    }
                     updateShortestPathList(currentNode, nextNode);
                 }
             }
@@ -57,9 +63,7 @@ public class Dijkstra {
         int length = 1 + currentNode.getLengthFromStart();
         if (nextNode.getLengthFromStart() == null || length == nextNode.getLengthFromStart()) {
             nextNode.setLengthFromStart(length);
-            if (!nextNode.getPreviousList().contains(currentNode)){
                 nextNode.getPreviousList().add(currentNode);
-            }
         }
         else if (length < nextNode.getLengthFromStart()){
             nextNode.getPreviousList().clear();
