@@ -3,16 +3,21 @@ import java.util.ArrayList;
 public class DijkstraNode {
     private  Object object;
     private ArrayList<DijkstraNode> next;
-    private ArrayList<DijkstraNode> previous;
+    private ArrayList<DijkstraNode> previousList;
+    private Integer lengthFromStart;
 
     public DijkstraNode(Object object) {
         this.object = object;
         next = new ArrayList<>();
-        previous = new ArrayList<>();
+        previousList = new ArrayList<>();
+        lengthFromStart = null;
     }
 
     public Object getObject() {
         return object;
+    }
+    public int getInt(){
+        return (int)object;
     }
 
     public void setObject(Object object) {
@@ -27,12 +32,20 @@ public class DijkstraNode {
         this.next = next;
     }
 
-    public ArrayList<DijkstraNode> getPrevious() {
-        return previous;
+    public ArrayList<DijkstraNode> getPreviousList() {
+        return previousList;
     }
 
-    public void setPrevious(ArrayList<DijkstraNode> previous) {
-        this.previous = previous;
+    public void setPreviousList(ArrayList<DijkstraNode> previousList) {
+        this.previousList = previousList;
+    }
+
+    public Integer getLengthFromStart() {
+        return lengthFromStart;
+    }
+
+    public void setLengthFromStart(Integer lengthFromStart) {
+        this.lengthFromStart = lengthFromStart;
     }
 
     @Override
