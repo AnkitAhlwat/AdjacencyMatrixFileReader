@@ -72,7 +72,8 @@ public class Dijkstra {
                 if (i == currentNodePosition) {
                     continue;
                 }
-                if (stringArray[currentNodePosition].charAt(i) == '1' && unVisited.contains(dijkstraNodeHashMap.get(i))) {
+                if (stringArray[currentNodePosition].charAt(i) == '1'
+                        && unVisited.contains(dijkstraNodeHashMap.get(i))) {
                     DijkstraNode nextNode = dijkstraNodeHashMap.get(i);
                     if (!dijkstraNodeDeque.contains(nextNode)) {
                         dijkstraNodeDeque.add(nextNode);
