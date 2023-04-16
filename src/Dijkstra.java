@@ -20,13 +20,13 @@ public class Dijkstra {
     private HashMap<Integer, DijkstraNode> dijkstraNodeHashMap;
 
     /**
-     * Instantiates a new Dijkstra.
+     * Instantiates a new Dijkstra object.
      */
     public Dijkstra() {
     }
 
     /**
-     * Read strings.
+     * Read strings from filepath.
      *
      * @param filePath the file path
      */
@@ -49,12 +49,16 @@ public class Dijkstra {
     }
 
     /**
-     * Find shortest paths bfs.
+     * Find the shortest paths using the BFS method.
      *
      * @param startingNode the starting node
      * @param endingNode   the ending node
+     * @throws ArrayIndexOutOfBoundsException if startingNode or endingNode not in range.
      */
     public void findShortestPathsBFS(final int startingNode, final int endingNode) {
+        if (endingNode >= stringArray.length || startingNode < 0) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
         unVisited = new ArrayList<>();
         dijkstraNodeHashMap = new HashMap<>();
         makeNodeList();

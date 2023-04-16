@@ -7,9 +7,9 @@ public class Main {
      *
      * @param args the input arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Dijkstra paths = new Dijkstra();
         paths.readStrings("src/AdjacencyMatrixTextFile.txt");
-        paths.findShortestPathsBFS(1,6);
+        paths.findShortestPathsBFS(1,20);
     }
 }

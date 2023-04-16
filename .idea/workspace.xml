@@ -7,7 +7,7 @@
     <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Polish file with checkstyle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DijkstraNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DijkstraNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Aman/Downloads/COMP-2522-Checkstyle.xml",
+    "last_opened_file_path": "C:/Users/Aman/IdeaProjects/ca.bcit.comp2522.labs/src/ca/bcit/comp2522/lab05",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +74,7 @@
       <workItem from="1681503965137" duration="524000" />
       <workItem from="1681585707027" duration="2794000" />
       <workItem from="1681603820171" duration="100000" />
-      <workItem from="1681604107076" duration="13617000" />
+      <workItem from="1681604107076" duration="14462000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1681147962451</created>
@@ -174,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681617674907</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Polish file with checkstyle">
+      <created>1681617877693</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681617877693</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
