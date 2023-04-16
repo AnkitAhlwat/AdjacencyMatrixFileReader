@@ -27,7 +27,11 @@ public class Dijkstra {
         }
     }
 
-    private void makeAdjacencyList(final String stringFromFile) {
+    private void makeAdjacencyList(String stringFromFile) {
+        stringFromFile = stringFromFile.replace("(", "");
+        stringFromFile = stringFromFile.replace(")", "");
+        stringFromFile = stringFromFile.replace(" ", "");
+        stringFromFile = stringFromFile.replace(",", "");
         stringArray = stringFromFile.split("\n");
     }
 
@@ -55,9 +59,16 @@ public class Dijkstra {
             }
             unVisited.remove(dijkstraNodeDeque.poll());
         }
-        connectNodes(dijkstraNodeHashMap.get(endingNode));
+        checkIfPathExists(dijkstraNodeHashMap.get(endingNode));
     }
 
+    private void makeNodeList() {
+        for (int i = 0; i < stringArray.length; i++) {
+            DijkstraNode currentNode = new DijkstraNode(i);
+            unVisited.add(currentNode);
+            dijkstraNodeHashMap.put(i, currentNode);
+        }
+    }
     private void updateShortestPathList(DijkstraNode currentNode, DijkstraNode nextNode){
 
         int length = 1 + currentNode.getLengthFromStart();
@@ -70,14 +81,14 @@ public class Dijkstra {
             nextNode.getPreviousList().add(currentNode);
         }
     }
-
-    private void makeNodeList() {
-        for (int i = 0; i < stringArray.length; i++) {
-            DijkstraNode currentNode = new DijkstraNode(i);
-            unVisited.add(currentNode);
-            dijkstraNodeHashMap.put(i, currentNode);
+    private void checkIfPathExists(DijkstraNode endingNode){
+        if (endingNode.getPreviousList().size()!= 0){
+            connectNodes(endingNode);
+        }else{
+            System.out.println("No path exists");
         }
     }
+
     private void connectNodes(DijkstraNode currentNode){
         if (currentNode.getPreviousList().size()==0){
             printPaths(currentNode);

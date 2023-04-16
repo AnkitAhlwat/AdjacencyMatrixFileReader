@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Debug Dijkstra to now show all paths">
+    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Rework code to not add existing items in que">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
     </list>
@@ -72,7 +72,7 @@
       <workItem from="1681503965137" duration="524000" />
       <workItem from="1681585707027" duration="2794000" />
       <workItem from="1681603820171" duration="100000" />
-      <workItem from="1681604107076" duration="11490000" />
+      <workItem from="1681604107076" duration="12690000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1681147962451</created>
@@ -137,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681614020114</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Rework code to not add existing items in que">
+      <created>1681615808857</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681615808857</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +160,8 @@
     <MESSAGE value="Add ArrayLists" />
     <MESSAGE value="Complete Dijkstra algorithm" />
     <MESSAGE value="Debug Dijkstra to now show all paths" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug Dijkstra to now show all paths" />
+    <MESSAGE value="Rework code to not add existing items in que" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rework code to not add existing items in que" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
