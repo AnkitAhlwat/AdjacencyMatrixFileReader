@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Polish code">
-      <change beforePath="$PROJECT_DIR$/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
+    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Polish file">
+      <change beforePath="$PROJECT_DIR$/src/AdjacencyMatrixFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdjacencyMatrixFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
       <workItem from="1681503965137" duration="524000" />
       <workItem from="1681585707027" duration="2794000" />
       <workItem from="1681603820171" duration="100000" />
-      <workItem from="1681604107076" duration="12757000" />
+      <workItem from="1681604107076" duration="12956000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1681147962451</created>
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681616938825</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Polish file">
+      <created>1681616999698</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681616999698</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,13 +169,13 @@
     <MESSAGE value="Debug BFS not showing components not connected" />
     <MESSAGE value="Add docstrings" />
     <MESSAGE value="Create new files to apply Dijkstra Algorithm" />
-    <MESSAGE value="Polish file" />
     <MESSAGE value="Add ArrayLists" />
     <MESSAGE value="Complete Dijkstra algorithm" />
     <MESSAGE value="Debug Dijkstra to now show all paths" />
     <MESSAGE value="Rework code to not add existing items in que" />
     <MESSAGE value="Polish code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Polish code" />
+    <MESSAGE value="Polish file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Polish file" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
