@@ -8,7 +8,7 @@ import java.util.LinkedList;
 
 
 /**
- * The type Dijkstra.
+ * An Adjacency Matrix File reader for un-weighted graphs using the BFS method and Dijkstra algorithm.
  *
  * @author Ankit Ahlwat
  * @version 2023

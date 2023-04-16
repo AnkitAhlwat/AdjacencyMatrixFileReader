@@ -13,6 +13,6 @@ public class Main {
     public static void main(final String[] args) {
         Dijkstra paths = new Dijkstra();
         paths.readStrings("src/AdjacencyMatrixTextFile.txt");
-        paths.findShortestPathsBFS(1,20);
+        paths.findShortestPathsBFS(0,6);
     }
 }

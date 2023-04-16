@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Add Exception">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Polish file to follow Checkstyle">
       <change beforePath="$PROJECT_DIR$/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -74,7 +73,7 @@
       <workItem from="1681503965137" duration="524000" />
       <workItem from="1681585707027" duration="2794000" />
       <workItem from="1681603820171" duration="100000" />
-      <workItem from="1681604107076" duration="14575000" />
+      <workItem from="1681604107076" duration="14761000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1681147962451</created>
@@ -188,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681618746288</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Polish file to follow Checkstyle">
+      <created>1681618849556</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681618849556</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +215,8 @@
     <MESSAGE value="Remove unused files" />
     <MESSAGE value="Polish file with checkstyle" />
     <MESSAGE value="Add Exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Exception" />
+    <MESSAGE value="Polish file to follow Checkstyle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Polish file to follow Checkstyle" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
