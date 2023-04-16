@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * A node to be used on an unweighted graph using the Dijkstra Method.
+ * A node for an unweighted graph using the Dijkstra Method.
  *
  * @author Ankit Ahlwat
  * @version 2023

@@ -7,15 +7,29 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 
+/**
+ * The type Dijkstra.
+ *
+ * @author Ankit Ahlwat
+ * @version 2023
+ */
 public class Dijkstra {
-    public String[] stringArray;
+    private String[] stringArray;
     private ArrayList<DijkstraNode> unVisited;
 
     private HashMap<Integer, DijkstraNode> dijkstraNodeHashMap;
 
+    /**
+     * Instantiates a new Dijkstra.
+     */
     public Dijkstra() {
     }
 
+    /**
+     * Read strings.
+     *
+     * @param filePath the file path
+     */
     public void readStrings(final String filePath) {
         try {
             String stringFromFile = Files.readString(Path.of(filePath));
@@ -34,7 +48,13 @@ public class Dijkstra {
         stringArray = stringFromFile.split("\n");
     }
 
-    public void findShortestPathsBFS(int startingNode, int endingNode) {
+    /**
+     * Find shortest paths bfs.
+     *
+     * @param startingNode the starting node
+     * @param endingNode   the ending node
+     */
+    public void findShortestPathsBFS(final int startingNode, final int endingNode) {
         unVisited = new ArrayList<>();
         dijkstraNodeHashMap = new HashMap<>();
         makeNodeList();
@@ -50,7 +70,7 @@ public class Dijkstra {
                 }
                 if (stringArray[currentNodePosition].charAt(i) == '1' && unVisited.contains(dijkstraNodeHashMap.get(i))) {
                     DijkstraNode nextNode = dijkstraNodeHashMap.get(i);
-                    if (!dijkstraNodeDeque.contains(nextNode)){
+                    if (!dijkstraNodeDeque.contains(nextNode)) {
                         dijkstraNodeDeque.add(nextNode);
                     }
                     updateShortestPathList(currentNode, nextNode);
@@ -68,39 +88,40 @@ public class Dijkstra {
             dijkstraNodeHashMap.put(i, currentNode);
         }
     }
-    private void updateShortestPathList(DijkstraNode currentNode, DijkstraNode nextNode){
 
+    private void updateShortestPathList(final DijkstraNode currentNode, final DijkstraNode nextNode) {
         int length = 1 + currentNode.getLengthFromStart();
         if (nextNode.getLengthFromStart() == null || length == nextNode.getLengthFromStart()) {
             nextNode.setLengthFromStart(length);
-                nextNode.getPreviousList().add(currentNode);
-        }
-        else if (length < nextNode.getLengthFromStart()){
+            nextNode.getPreviousList().add(currentNode);
+        } else if (length < nextNode.getLengthFromStart()) {
             nextNode.getPreviousList().clear();
             nextNode.getPreviousList().add(currentNode);
         }
     }
-    private void checkIfPathExists(DijkstraNode endingNode){
-        if (endingNode.getPreviousList().size()!= 0){
+
+    private void checkIfPathExists(final DijkstraNode endingNode) {
+        if (endingNode.getPreviousList().size() != 0) {
             connectNodes(endingNode);
-        }else{
+        } else {
             System.out.println("No path exists");
         }
     }
 
-    private void connectNodes(DijkstraNode currentNode){
-        if (currentNode.getPreviousList().size()==0){
+    private void connectNodes(final DijkstraNode currentNode) {
+        if (currentNode.getPreviousList().size() == 0) {
             printPaths(currentNode);
-        }else{
-            for (DijkstraNode prevNode: currentNode.getPreviousList()) {
-                prevNode.getNextList().add(0,currentNode);
+        } else {
+            for (DijkstraNode prevNode : currentNode.getPreviousList()) {
+                prevNode.getNextList().add(0, currentNode);
                 connectNodes(prevNode);
             }
         }
     }
-    private void printPaths(DijkstraNode node){
-        while (node.getNextList().size()!=0){
-            System.out.printf("%s -> ",node);
+
+    private void printPaths(DijkstraNode node) {
+        while (node.getNextList().size() != 0) {
+            System.out.printf("%s -> ", node);
             node = node.getNextList().get(0);
         }
         System.out.println(node);
