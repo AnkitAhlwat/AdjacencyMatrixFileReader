@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Add ArrayLists">
+    <list default="true" id="cfbd0243-322e-4e20-a37f-9629a04dba84" name="Changes" comment="Complete Dijkstra algorithm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdjacencyMatrixTextFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdjacencyMatrixTextFile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DijkstraNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DijkstraNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +35,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "Debugger_Data_Views_Java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -72,7 +75,7 @@
       <workItem from="1681503965137" duration="524000" />
       <workItem from="1681585707027" duration="2794000" />
       <workItem from="1681603820171" duration="100000" />
-      <workItem from="1681604107076" duration="4281000" />
+      <workItem from="1681604107076" duration="9719000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1681147962451</created>
@@ -123,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681588585905</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Complete Dijkstra algorithm">
+      <created>1681608508369</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681608508369</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +147,8 @@
     <MESSAGE value="Create new files to apply Dijkstra Algorithm" />
     <MESSAGE value="Polish file" />
     <MESSAGE value="Add ArrayLists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ArrayLists" />
+    <MESSAGE value="Complete Dijkstra algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete Dijkstra algorithm" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

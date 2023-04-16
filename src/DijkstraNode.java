@@ -2,13 +2,13 @@ import java.util.ArrayList;
 
 public class DijkstraNode {
     private  Object object;
-    private ArrayList<DijkstraNode> next;
+    private ArrayList<DijkstraNode> nextList;
     private ArrayList<DijkstraNode> previousList;
     private Integer lengthFromStart;
 
     public DijkstraNode(Object object) {
         this.object = object;
-        next = new ArrayList<>();
+        nextList = new ArrayList<>();
         previousList = new ArrayList<>();
         lengthFromStart = null;
     }
@@ -24,12 +24,12 @@ public class DijkstraNode {
         this.object = object;
     }
 
-    public ArrayList<DijkstraNode> getNext() {
-        return next;
+    public ArrayList<DijkstraNode> getNextList() {
+        return nextList;
     }
 
-    public void setNext(ArrayList<DijkstraNode> next) {
-        this.next = next;
+    public void setNextList(ArrayList<DijkstraNode> nextList) {
+        this.nextList = nextList;
     }
 
     public ArrayList<DijkstraNode> getPreviousList() {
@@ -50,9 +50,6 @@ public class DijkstraNode {
 
     @Override
     public String toString() {
-        return "DijkstraNode{" +
-                "object=" + object +
-                ", next=" + next +
-                '}';
+        return ""+object;
     }
 }

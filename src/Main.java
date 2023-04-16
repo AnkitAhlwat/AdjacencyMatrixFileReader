@@ -8,9 +8,8 @@ public class Main {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        AdjacencyMatrixFileReader fileReader = new AdjacencyMatrixFileReader();
-        fileReader.readStrings("src/AdjacencyMatrixTextFile.txt");
-//        fileReader.findAllPathsBFS();
-        fileReader.findAllPathsDFS(11);
+        Dijkstra paths = new Dijkstra();
+        paths.readStrings("src/AdjacencyMatrixTextFile.txt");
+        paths.findShortestPathsBFS(1,6);
     }
 }

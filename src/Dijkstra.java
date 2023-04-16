@@ -9,6 +9,9 @@ public class Dijkstra {
 
     private HashMap<Integer, DijkstraNode> dijkstraNodeHashMap;
 
+    public Dijkstra() {
+    }
+
     public String readStrings(final String filePath) {
         try {
             String stringFromFile = Files.readString(Path.of(filePath));
@@ -38,18 +41,30 @@ public class Dijkstra {
                 if (i == currentNodePosition) {
                     continue;
                 }
-                if (stringArray[currentNodePosition].charAt(i) == 1 && unVisited.contains(dijkstraNodeHashMap.get(i))) {
+                if (stringArray[currentNodePosition].charAt(i) == '1' && unVisited.contains(dijkstraNodeHashMap.get(i))) {
                     DijkstraNode nextNode = dijkstraNodeHashMap.get(i);
                     dijkstraNodeDeque.add(nextNode);
-                    int length = 1 + currentNode.getLengthFromStart();
-                    if (length <= nextNode.getLengthFromStart() || nextNode.getLengthFromStart() == null) {
-                        nextNode.setLengthFromStart(length);
-                        nextNode.getPreviousList().add(currentNode);
-                    }
+                    updateShortestPathList(currentNode, nextNode);
                 }
             }
             unVisited.remove(dijkstraNodeDeque.poll());
-        } connectNodes(dijkstraNodeHashMap.get(endingNode));
+        }
+        connectNodes(dijkstraNodeHashMap.get(endingNode));
+    }
+
+    private void updateShortestPathList(DijkstraNode currentNode, DijkstraNode nextNode){
+
+        int length = 1 + currentNode.getLengthFromStart();
+        if (nextNode.getLengthFromStart() == null || length == nextNode.getLengthFromStart()) {
+            nextNode.setLengthFromStart(length);
+            if (!nextNode.getPreviousList().contains(currentNode)){
+                nextNode.getPreviousList().add(currentNode);
+            }
+        }
+        else if (length < nextNode.getLengthFromStart()){
+            nextNode.getPreviousList().clear();
+            nextNode.getPreviousList().add(currentNode);
+        }
     }
 
     private void makeNodeList() {
@@ -59,12 +74,21 @@ public class Dijkstra {
             dijkstraNodeHashMap.put(i, currentNode);
         }
     }
-    private void connectNodes(DijkstraNode endingNode){
-        if (endingNode.getPreviousList()!=null){
-            for (DijkstraNode node: endingNode.getPreviousList()) {
-                node.getNext().add(endingNode);
-                connectNodes(node);
+    private void connectNodes(DijkstraNode currentNode){
+        if (currentNode.getPreviousList().size()==0){
+            printPaths(currentNode);
+        }else{
+            for (DijkstraNode prevNode: currentNode.getPreviousList()) {
+                prevNode.getNextList().add(0,currentNode);
+                connectNodes(prevNode);
             }
         }
+    }
+    private void printPaths(DijkstraNode node){
+        while (node.getNextList().size()!=0){
+            System.out.printf("%s -> ",node);
+            node = node.getNextList().get(0);
+        }
+        System.out.println(node);
     }
 }
