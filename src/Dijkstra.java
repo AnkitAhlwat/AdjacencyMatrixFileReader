@@ -16,14 +16,13 @@ public class Dijkstra {
     public Dijkstra() {
     }
 
-    public String readStrings(final String filePath) {
+    public void readStrings(final String filePath) {
         try {
             String stringFromFile = Files.readString(Path.of(filePath));
             makeAdjacencyList(stringFromFile);
-            return stringFromFile;
         } catch (IOException ex) {
             ex.printStackTrace();
-            return "Could Not Find File, Please Try Again";
+            System.out.println("Could Not Find File, Please Try Again");
         }
     }
 
